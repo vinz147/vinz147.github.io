@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Special Message</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .container {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 20px auto;
+      background-color: #f2f2f2;
+    }
+    .message {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi, Dan!</h1>
+    <p>There's something special I want to share with you. Are you sure you want to know the message?</p>
+    <button id="confirm1">Yes</button>
+    <button id="confirm1">No</button>
+
+    <div id="confirmation2" style="display: none;">
+      <p>Once you said yes, Dan, there's no turning back. Are you sure you want to proceed?</p>
+      <button id="confirm2">Yes</button>
+      <button id="confirm2">No</button>
+    </div>
+
+    <div id="message" style="display: none;">
+      <p class="message">I just wanted to let you know that I found you attractive and cute..................I have to admit that I can't stop thinking about you..................................guess you've captured my thoughts completely, and................................................................................................... I like you.</p>
+      <p class="message">but........! !</p>
+      <p class="message">I also like your flaws.......</p>
+      <p class="message">your imperfections .....</p>
+      <p class="message">your vibe.......</p>
+      <p class="message">your style ....</p>
+      <p class="message">your worst</p>
+      <p class="message">and most of all your smile!</p>
+      <p class="message">but no pressure!</p>
+      <p class="message">you don't need to reciprocate my feelings, Dan. I just need to get this out of my head for my peace of mind.</p>
+    </div>
+  </div>
+
+  <script>
+    const confirm1Buttons = document.querySelectorAll('#confirm1');
+    const confirm2Button = document.getElementById('confirm2');
+    const confirmation2Div = document.getElementById('confirmation2');
+    const messageDiv = document.getElementById('message');
+
+    confirm1Buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.textContent === 'Yes') {
+          confirmation2Div.style.display = 'block';
+        } else {
+          // Handle 'No' response
+          alert("Okay, maybe another time."); 
+        }
+      });
+    });
+
+    confirm2Button.addEventListener('click', () => {
+      if (confirm2Button.textContent === 'Yes') {
+        messageDiv.style.display = 'block';
+      } else {
+        // Handle 'No' response
+        alert("Alright, I understand."); 
+      }
+    });
+  </script>
+</body>
+</html>
